@@ -90,3 +90,5 @@
 
 The app is now production-ready and will work reliably with real Dota 2 player data!
 
+P.S (This note was created with AI assistance teacher)
+

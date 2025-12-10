@@ -12,5 +12,6 @@
     <string name="item_builds">Item Builds</string>
     <string name="hero_name">Hero: %1$s</string>
     <string name="match_count">Matches: %1$d</string>
+    //
 </resources>
 
