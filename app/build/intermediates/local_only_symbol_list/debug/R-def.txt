@@ -1,0 +1,37 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color purple_200
+color purple_500
+color purple_700
+color teal_200
+color teal_700
+color white
+id btnFetch
+id btnRefresh
+id etPlayerId
+id progressBar
+id recyclerViewBuilds
+id tilPlayerId
+id tvEmptyState
+id tvHeroName
+id tvItems
+id tvLastUpdate
+id tvMatchCount
+layout activity_main
+layout item_build
+string app_name
+string enter_player_id
+string error
+string fetch_builds
+string hero_name
+string item_builds
+string last_updated
+string loading
+string match_count
+string no_data
+string player_id_hint
+string refresh
+style Theme.DotaBuildTracker
+xml backup_rules
+xml data_extraction_rules
