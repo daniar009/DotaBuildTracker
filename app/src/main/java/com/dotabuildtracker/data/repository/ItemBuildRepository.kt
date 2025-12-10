@@ -190,7 +190,8 @@ class ItemBuildRepository(
         }
         
         // Merge with fallback mapping for items not in API response
-        return (mapping + createItemIdMapping()).distinctBy { it.key }
+        val fallback = createItemIdMapping()
+        return mapping + fallback
     }
     
     fun getLastUpdateTime(): Long {
