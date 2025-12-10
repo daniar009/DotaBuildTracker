@@ -161,3 +161,4 @@ The app uses the **OpenDota API** (https://api.opendota.com/api/) to fetch real 
 
 This project is created for educational purposes as part of a final course project.
 
+(and this one too is created with assistance of AI)
