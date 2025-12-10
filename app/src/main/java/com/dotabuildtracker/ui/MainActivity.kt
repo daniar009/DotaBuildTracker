@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var adapter: ItemBuildAdapter
     
-    private val viewModel: ItemBuildViewModel by viewModels {
+    private val viewModel: ItemBuildViewModel by viewModels(factoryProducer = {
         val database = AppDatabase.getDatabase(this)
         val repository = ItemBuildRepository(
             RetrofitClient.apiService,
@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             PreferencesManager(this)
         )
         ItemBuildViewModelFactory(repository)
-    }
+    })
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
