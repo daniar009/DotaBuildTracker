@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Dota Build Tracker</string>
+    <string name="enter_player_id">Enter Player ID</string>
+    <string name="fetch_builds">Fetch Builds</string>
+    <string name="loading">Loading...</string>
+    <string name="error">Error occurred</string>
+    <string name="no_data">No data available</string>
+    <string name="player_id_hint">Player ID (e.g., 123456789)</string>
+    <string name="last_updated">Last updated: %1$s</string>
+    <string name="refresh">Refresh</string>
+    <string name="item_builds">Item Builds</string>
+    <string name="hero_name">Hero: %1$s</string>
+    <string name="match_count">Matches: %1$d</string>
+</resources>
+
