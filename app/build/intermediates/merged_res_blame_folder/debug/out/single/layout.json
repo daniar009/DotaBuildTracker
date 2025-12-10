@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.dotabuildtracker.app-mergeDebugResources-48:/layout/activity_main.xml",
+        "source": "com.dotabuildtracker.app-main-51:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.dotabuildtracker.app-mergeDebugResources-48:/layout/item_build.xml",
+        "source": "com.dotabuildtracker.app-main-51:/layout/item_build.xml"
+    }
+]
