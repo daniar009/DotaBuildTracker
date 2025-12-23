@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Dota 2 Logo - Angular D shape in red -->
+    <path
+        android:strokeColor="@color/dota_text_primary"
+        android:strokeWidth="0.5"
+        android:fillColor="@color/dota_red"
+        android:pathData="M4,3L4,21L12,21C16,21 19,18 19,12C19,6 16,3 12,3L4,3Z"/>
+    <path
+        android:strokeColor="@color/dota_text_primary"
+        android:strokeWidth="0.5"
+        android:fillColor="@color/dota_red_dark"
+        android:pathData="M6,5L6,19L12,19C15,19 17,16 17,12C17,8 15,5 12,5L6,5Z"/>
+</vector>
