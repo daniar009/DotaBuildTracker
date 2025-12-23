@@ -4,8 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
-    app:cardCornerRadius="8dp"
-    app:cardElevation="4dp">
+    app:cardBackgroundColor="@color/dota_dark_gray"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp"
+    app:strokeWidth="2dp"
+    app:strokeColor="@color/dota_red">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,35 +16,47 @@
         android:orientation="vertical"
         android:padding="16dp">
 
+        <!-- Hero Name -->
         <TextView
             android:id="@+id/tvHeroName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hero Name"
-            android:textSize="20sp"
+            android:textSize="22sp"
             android:textStyle="bold"
-            android:textColor="?attr/colorPrimary" />
+            android:textColor="@color/dota_red"
+            android:letterSpacing="0.02" />
 
+        <!-- Match Count -->
         <TextView
             android:id="@+id/tvMatchCount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="4dp"
             android:text="Matches: 0"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:textColor="@color/dota_text_secondary" />
 
+        <!-- Items Label -->
         <TextView
-            android:id="@+id/tvItems"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Items: "
+            android:layout_marginTop="16dp"
+            android:text="Common Items:"
             android:textSize="14sp"
-            android:textStyle="italic" />
+            android:textStyle="bold"
+            android:textColor="@color/dota_text_primary" />
+
+        <!-- Items Grid -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:clipToPadding="false"
+            android:padding="4dp" />
 
     </LinearLayout>
-
-    //
 
 </com.google.android.material.card.MaterialCardView>
 

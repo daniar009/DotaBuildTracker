@@ -14,6 +14,7 @@ import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.dotabuildtracker.R;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import java.lang.NullPointerException;
@@ -34,6 +35,9 @@ public final class ActivityMainBinding implements ViewBinding {
   public final TextInputEditText etPlayerId;
 
   @NonNull
+  public final MaterialCardView headerCard;
+
+  @NonNull
   public final ProgressBar progressBar;
 
   @NonNull
@@ -50,13 +54,14 @@ public final class ActivityMainBinding implements ViewBinding {
 
   private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull MaterialButton btnFetch,
       @NonNull MaterialButton btnRefresh, @NonNull TextInputEditText etPlayerId,
-      @NonNull ProgressBar progressBar, @NonNull RecyclerView recyclerViewBuilds,
-      @NonNull TextInputLayout tilPlayerId, @NonNull TextView tvEmptyState,
-      @NonNull TextView tvLastUpdate) {
+      @NonNull MaterialCardView headerCard, @NonNull ProgressBar progressBar,
+      @NonNull RecyclerView recyclerViewBuilds, @NonNull TextInputLayout tilPlayerId,
+      @NonNull TextView tvEmptyState, @NonNull TextView tvLastUpdate) {
     this.rootView = rootView;
     this.btnFetch = btnFetch;
     this.btnRefresh = btnRefresh;
     this.etPlayerId = etPlayerId;
+    this.headerCard = headerCard;
     this.progressBar = progressBar;
     this.recyclerViewBuilds = recyclerViewBuilds;
     this.tilPlayerId = tilPlayerId;
@@ -109,6 +114,12 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.headerCard;
+      MaterialCardView headerCard = ViewBindings.findChildViewById(rootView, id);
+      if (headerCard == null) {
+        break missingId;
+      }
+
       id = R.id.progressBar;
       ProgressBar progressBar = ViewBindings.findChildViewById(rootView, id);
       if (progressBar == null) {
@@ -140,7 +151,7 @@ public final class ActivityMainBinding implements ViewBinding {
       }
 
       return new ActivityMainBinding((ConstraintLayout) rootView, btnFetch, btnRefresh, etPlayerId,
-          progressBar, recyclerViewBuilds, tilPlayerId, tvEmptyState, tvLastUpdate);
+          headerCard, progressBar, recyclerViewBuilds, tilPlayerId, tvEmptyState, tvLastUpdate);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

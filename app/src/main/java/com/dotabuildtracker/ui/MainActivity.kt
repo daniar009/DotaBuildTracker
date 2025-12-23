@@ -14,6 +14,7 @@ import com.dotabuildtracker.data.repository.ItemBuildRepository
 import com.dotabuildtracker.databinding.ActivityMainBinding
 import com.dotabuildtracker.ui.adapter.ItemBuildAdapter
 import com.dotabuildtracker.ui.viewmodel.ItemBuildViewModel
+import com.dotabuildtracker.R
 import com.dotabuildtracker.ui.viewmodel.ItemBuildViewModelFactory
 import com.dotabuildtracker.utils.WorkManagerHelper
 
@@ -36,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         
+        setupActionBar()
         setupRecyclerView()
         setupObservers()
         setupClickListeners()
@@ -49,6 +51,15 @@ class MainActivity : AppCompatActivity() {
         
         // Schedule daily updates
         WorkManagerHelper.scheduleDailyUpdate(this)
+    }
+    
+    private fun setupActionBar() {
+        supportActionBar?.apply {
+            setDisplayShowHomeEnabled(true)
+            setDisplayUseLogoEnabled(true)
+            setLogo(R.drawable.dota_icon)
+            title = "Dota Build Tracker"
+        }
     }
     
     private fun setupRecyclerView() {

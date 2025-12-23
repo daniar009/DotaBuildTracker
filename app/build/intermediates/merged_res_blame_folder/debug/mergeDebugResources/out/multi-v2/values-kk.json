@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.dotabuildtracker.app-mergeDebugResources-47:/values-kk/values-kk.xml",
+            "outputFile": "com.dotabuildtracker.app-mergeDebugResources-48:/values-kk/values-kk.xml",
             "map": [
                 {
                     "source": "C:\\Users\\kamar\\.gradle\\caches\\8.13\\transforms\\95ae54765dc039b43a696610255c60fa\\transformed\\appcompat-1.6.1\\res\\values-kk\\values-kk.xml",

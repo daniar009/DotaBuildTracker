@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.dotabuildtracker.app-mergeDebugResources-47:/values-sw360dp-v13/values-sw360dp-v13.xml",
+            "outputFile": "com.dotabuildtracker.app-mergeDebugResources-48:/values-sw360dp-v13/values-sw360dp-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\kamar\\.gradle\\caches\\8.13\\transforms\\68ff9d7506e2bc66c79ad0814c0c460c\\transformed\\preference-1.2.1\\res\\values-sw360dp-v13\\values-sw360dp-v13.xml",

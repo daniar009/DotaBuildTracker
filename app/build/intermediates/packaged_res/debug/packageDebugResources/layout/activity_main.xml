@@ -4,90 +4,129 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:background="@color/dota_black"
     tools:context=".ui.MainActivity">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilPlayerId"
+    <!-- Header Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/headerCard"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="@string/player_id_hint"
-        app:layout_constraintEnd_toStartOf="@+id/btnFetch"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="@color/dota_dark_gray"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintWidth_percent="0.7">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etPlayerId"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
-            android:maxLines="1" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:orientation="vertical"
+            android:padding="16dp">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnFetch"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/fetch_builds"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tilPlayerId"
-        app:layout_constraintTop_toTopOf="parent" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPlayerId"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/player_id_hint"
+                app:boxStrokeColor="@color/dota_red"
+                app:hintTextColor="@color/dota_red"
+                app:boxStrokeWidth="2dp"
+                app:boxBackgroundColor="@color/dota_gray">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnRefresh"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/refresh"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tilPlayerId"
-        app:layout_constraintWidth_percent="1.0" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPlayerId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:textColor="@color/dota_text_primary"
+                    android:textColorHint="@color/dota_text_hint" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/tvLastUpdate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/last_updated"
-        android:textSize="12sp"
-        android:textColor="?attr/colorOnSurface"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRefresh" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
 
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnFetch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/fetch_builds"
+                    android:textColor="@color/dota_text_primary"
+                    app:backgroundTint="@color/dota_red"
+                    app:cornerRadius="8dp"
+                    style="@style/Widget.MaterialComponents.Button" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRefresh"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/refresh"
+                    android:textColor="@color/dota_text_primary"
+                    app:backgroundTint="@color/dota_red_dark"
+                    app:cornerRadius="8dp"
+                    style="@style/Widget.MaterialComponents.Button" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvLastUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/last_updated"
+                android:textSize="12sp"
+                android:textColor="@color/dota_text_secondary" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Progress Bar -->
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:indeterminateTint="@color/dota_red"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- RecyclerView for Item Builds -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewBuilds"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        android:clipToPadding="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLastUpdate" />
+        app:layout_constraintTop_toBottomOf="@+id/headerCard" />
 
+    <!-- Empty State -->
     <TextView
         android:id="@+id/tvEmptyState"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/no_data"
-        android:textSize="16sp"
+        android:textSize="18sp"
+        android:textColor="@color/dota_text_secondary"
+        android:textStyle="italic"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLastUpdate" />
-
-    //
+        app:layout_constraintTop_toBottomOf="@+id/headerCard" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

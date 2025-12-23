@@ -1486,6 +1486,16 @@ color dim_foreground_disabled_material_dark
 color dim_foreground_disabled_material_light
 color dim_foreground_material_dark
 color dim_foreground_material_light
+color dota_black
+color dota_dark_gray
+color dota_gray
+color dota_light_gray
+color dota_red
+color dota_red_dark
+color dota_red_light
+color dota_text_hint
+color dota_text_primary
+color dota_text_secondary
 color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
@@ -3071,6 +3081,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable dota_icon
 drawable ic_arrow_back_black_24
 drawable ic_arrow_down_24dp
 drawable ic_call_answer
@@ -3090,6 +3101,11 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_search_black_24
+drawable icon_armor
+drawable icon_staff
+drawable icon_sword
+drawable icon_utility
+drawable item_background
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
 drawable m3_bottom_sheet_drag_handle
@@ -3289,6 +3305,7 @@ id clip_horizontal
 id clip_vertical
 id clockwise
 id closest
+id coil_request_manager
 id collapseActionView
 id compress
 id confirm_button
@@ -3377,6 +3394,7 @@ id graph_wrap
 id group_divider
 id grouping
 id groups
+id headerCard
 id header_title
 id hide_ime_id
 id hideable
@@ -3399,6 +3417,7 @@ id invisible
 id inward
 id italic
 id item_touch_helper_previous_elevation
+id ivItemIcon
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -3546,6 +3565,7 @@ id right_side
 id rounded
 id row_index_key
 id rtl
+id rvItems
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -3660,7 +3680,7 @@ id transition_transform
 id triangle
 id tvEmptyState
 id tvHeroName
-id tvItems
+id tvItemName
 id tvLastUpdate
 id tvMatchCount
 id unchecked
@@ -3824,6 +3844,7 @@ layout image_frame
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout item_build
+layout item_icon
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -4378,6 +4399,8 @@ style BasePreferenceThemeOverlay
 style CardView
 style CardView_Dark
 style CardView_Light
+style DotaActionBar
+style DotaActionBarTitle
 style MaterialAlertDialog_Material3
 style MaterialAlertDialog_Material3_Animation
 style MaterialAlertDialog_Material3_Body_Text
