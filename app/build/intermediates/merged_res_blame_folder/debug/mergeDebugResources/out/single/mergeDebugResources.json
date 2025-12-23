@@ -1,0 +1,58 @@
+[
+    {
+        "merged": "C:\\Users\\kamar\\.gradle\\daemon\\8.13\\com.dotabuildtracker.app-debug-50:\\layout_item_build.xml.flat",
+        "source": "C:\\Users\\kamar\\.gradle\\daemon\\8.13\\com.dotabuildtracker.app-main-52:\\layout\\item_build.xml"
+    },
+    {
+        "merged": "C:\\Users\\kamar\\.gradle\\daemon\\8.13\\com.dotabuildtracker.app-debug-50:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\kamar\\.gradle\\daemon\\8.13\\com.dotabuildtracker.app-main-52:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\kamar\\.gradle\\daemon\\8.13\\com.dotabuildtracker.app-debug-50:\\drawable_icon_sword.xml.flat",
+        "source": "C:\\Users\\kamar\\.gradle\\daemon\\8.13\\com.dotabuildtracker.app-main-52:\\drawable\\icon_sword.xml"
+    },
+    {
+        "merged": "C:\\Users\\kamar\\.gradle\\daemon\\8.13\\com.dotabuildtracker.app-debug-50:\\drawable_match_count_badge.xml.flat",
+        "source": "C:\\Users\\kamar\\.gradle\\daemon\\8.13\\com.dotabuildtracker.app-main-52:\\drawable\\match_count_badge.xml"
+    },
+    {
+        "merged": "C:\\Users\\kamar\\.gradle\\daemon\\8.13\\com.dotabuildtracker.app-debug-50:\\drawable_icon_armor.xml.flat",
+        "source": "C:\\Users\\kamar\\.gradle\\daemon\\8.13\\com.dotabuildtracker.app-main-52:\\drawable\\icon_armor.xml"
+    },
+    {
+        "merged": "C:\\Users\\kamar\\.gradle\\daemon\\8.13\\com.dotabuildtracker.app-debug-50:\\drawable_dota_icon.xml.flat",
+        "source": "C:\\Users\\kamar\\.gradle\\daemon\\8.13\\com.dotabuildtracker.app-main-52:\\drawable\\dota_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\kamar\\.gradle\\daemon\\8.13\\com.dotabuildtracker.app-debug-50:\\drawable_item_background.xml.flat",
+        "source": "C:\\Users\\kamar\\.gradle\\daemon\\8.13\\com.dotabuildtracker.app-main-52:\\drawable\\item_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\kamar\\.gradle\\daemon\\8.13\\com.dotabuildtracker.app-debug-50:\\drawable_icon_utility.xml.flat",
+        "source": "C:\\Users\\kamar\\.gradle\\daemon\\8.13\\com.dotabuildtracker.app-main-52:\\drawable\\icon_utility.xml"
+    },
+    {
+        "merged": "C:\\Users\\kamar\\.gradle\\daemon\\8.13\\com.dotabuildtracker.app-debug-50:\\layout_item_icon_with_name.xml.flat",
+        "source": "C:\\Users\\kamar\\.gradle\\daemon\\8.13\\com.dotabuildtracker.app-main-52:\\layout\\item_icon_with_name.xml"
+    },
+    {
+        "merged": "C:\\Users\\kamar\\.gradle\\daemon\\8.13\\com.dotabuildtracker.app-debug-50:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\kamar\\.gradle\\daemon\\8.13\\com.dotabuildtracker.app-main-52:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\kamar\\.gradle\\daemon\\8.13\\com.dotabuildtracker.app-debug-50:\\layout_item_icon.xml.flat",
+        "source": "C:\\Users\\kamar\\.gradle\\daemon\\8.13\\com.dotabuildtracker.app-main-52:\\layout\\item_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\kamar\\.gradle\\daemon\\8.13\\com.dotabuildtracker.app-debug-50:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\kamar\\.gradle\\daemon\\8.13\\com.dotabuildtracker.app-main-52:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\kamar\\.gradle\\daemon\\8.13\\com.dotabuildtracker.app-debug-50:\\drawable_icon_staff.xml.flat",
+        "source": "C:\\Users\\kamar\\.gradle\\daemon\\8.13\\com.dotabuildtracker.app-main-52:\\drawable\\icon_staff.xml"
+    },
+    {
+        "merged": "com.dotabuildtracker.app-debug-50:/drawable_icon_staff.xml.flat",
+        "source": "com.dotabuildtracker.app-main-52:/drawable/icon_staff.xml"
+    }
+]

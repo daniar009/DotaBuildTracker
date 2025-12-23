@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="dota_black">#0A0A0A</color>
+    <color name="dota_dark_gray">#1A1A1A</color>
+    <color name="dota_gray">#2A2A2A</color>
+    <color name="dota_light_gray">#3A3A3A</color>
+    <color name="dota_red">#C90F0F</color>
+    <color name="dota_red_dark">#A00C0C</color>
+    <color name="dota_red_light">#E01414</color>
+    <color name="dota_text_hint">#999999</color>
+    <color name="dota_text_primary">#FFFFFF</color>
+    <color name="dota_text_secondary">#CCCCCC</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">Dota Build Tracker</string>
+    <string name="enter_player_id">Enter Player ID</string>
+    <string name="error">Error occurred</string>
+    <string name="fetch_builds">Fetch Builds</string>
+    <string name="hero_name">Hero: %1$s</string>
+    <string name="item_builds">Item Builds</string>
+    <string name="last_updated">Last updated: %1$s</string>
+    <string name="loading">Loading...</string>
+    <string name="match_count">Matches: %1$d</string>
+    <string name="no_data">No data available</string>
+    <string name="player_id_hint">Player ID (e.g., 123456789)</string>
+    <string name="refresh">Refresh</string>
+    <style name="DotaActionBar" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/dota_dark_gray</item>
+        <item name="titleTextStyle">@style/DotaActionBarTitle</item>
+    </style>
+    <style name="DotaActionBarTitle" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textColor">@color/dota_red</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="Theme.DotaBuildTracker" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        
+        <item name="colorPrimary">@color/dota_red</item>
+        <item name="colorPrimaryVariant">@color/dota_red_dark</item>
+        <item name="colorOnPrimary">@color/dota_text_primary</item>
+        <item name="colorSecondary">@color/dota_red_light</item>
+        <item name="colorSecondaryVariant">@color/dota_red_dark</item>
+        <item name="colorOnSecondary">@color/dota_text_primary</item>
+        
+        
+        <item name="android:colorBackground">@color/dota_black</item>
+        <item name="colorSurface">@color/dota_dark_gray</item>
+        <item name="colorOnSurface">@color/dota_text_primary</item>
+        <item name="colorOnBackground">@color/dota_text_primary</item>
+        
+        
+        <item name="android:statusBarColor">@color/dota_black</item>
+        <item name="android:windowLightStatusBar">false</item>
+        
+        
+        <item name="actionBarStyle">@style/DotaActionBar</item>
+    </style>
+</resources>

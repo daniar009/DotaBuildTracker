@@ -3,6 +3,7 @@ package com.dotabuildtracker.ui.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.dotabuildtracker.data.model.ItemBuild
@@ -26,10 +27,27 @@ class ItemBuildAdapter : ListAdapter<ItemBuild, ItemBuildAdapter.ItemBuildViewHo
     class ItemBuildViewHolder(
         private val binding: ItemBuildBinding
     ) : RecyclerView.ViewHolder(binding.root) {
+        private val itemIconAdapter = ItemIconAdapter()
+        
+        init {
+            // Setup nested RecyclerView for item icons with GridLayoutManager
+            // Show 3 items per row (since we now have names below icons, they need more width)
+            binding.rvItems.apply {
+                layoutManager = GridLayoutManager(binding.root.context, 3)
+                adapter = itemIconAdapter
+                isNestedScrollingEnabled = false
+            }
+        }
+        
         fun bind(build: ItemBuild) {
             binding.tvHeroName.text = build.heroName
             binding.tvMatchCount.text = "Matches: ${build.matchCount}"
-            binding.tvItems.text = build.items.joinToString(", ")
+            
+            // Filter out "No common items found" and empty items
+            val validItems = build.items.filter { 
+                it.isNotBlank() && it != "No common items found" 
+            }
+            itemIconAdapter.submitList(validItems)
         }
     }
     

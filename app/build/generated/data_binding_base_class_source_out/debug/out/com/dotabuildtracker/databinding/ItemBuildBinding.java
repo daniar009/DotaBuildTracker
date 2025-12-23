@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.dotabuildtracker.R;
@@ -20,19 +21,19 @@ public final class ItemBuildBinding implements ViewBinding {
   private final MaterialCardView rootView;
 
   @NonNull
-  public final TextView tvHeroName;
+  public final RecyclerView rvItems;
 
   @NonNull
-  public final TextView tvItems;
+  public final TextView tvHeroName;
 
   @NonNull
   public final TextView tvMatchCount;
 
-  private ItemBuildBinding(@NonNull MaterialCardView rootView, @NonNull TextView tvHeroName,
-      @NonNull TextView tvItems, @NonNull TextView tvMatchCount) {
+  private ItemBuildBinding(@NonNull MaterialCardView rootView, @NonNull RecyclerView rvItems,
+      @NonNull TextView tvHeroName, @NonNull TextView tvMatchCount) {
     this.rootView = rootView;
+    this.rvItems = rvItems;
     this.tvHeroName = tvHeroName;
-    this.tvItems = tvItems;
     this.tvMatchCount = tvMatchCount;
   }
 
@@ -63,15 +64,15 @@ public final class ItemBuildBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.tvHeroName;
-      TextView tvHeroName = ViewBindings.findChildViewById(rootView, id);
-      if (tvHeroName == null) {
+      id = R.id.rvItems;
+      RecyclerView rvItems = ViewBindings.findChildViewById(rootView, id);
+      if (rvItems == null) {
         break missingId;
       }
 
-      id = R.id.tvItems;
-      TextView tvItems = ViewBindings.findChildViewById(rootView, id);
-      if (tvItems == null) {
+      id = R.id.tvHeroName;
+      TextView tvHeroName = ViewBindings.findChildViewById(rootView, id);
+      if (tvHeroName == null) {
         break missingId;
       }
 
@@ -81,7 +82,7 @@ public final class ItemBuildBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ItemBuildBinding((MaterialCardView) rootView, tvHeroName, tvItems, tvMatchCount);
+      return new ItemBuildBinding((MaterialCardView) rootView, rvItems, tvHeroName, tvMatchCount);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -5,6 +5,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dotabuildtracker.data.local.AppDatabase
 import com.dotabuildtracker.data.preferences.PreferencesManager
@@ -13,27 +14,30 @@ import com.dotabuildtracker.data.repository.ItemBuildRepository
 import com.dotabuildtracker.databinding.ActivityMainBinding
 import com.dotabuildtracker.ui.adapter.ItemBuildAdapter
 import com.dotabuildtracker.ui.viewmodel.ItemBuildViewModel
+import com.dotabuildtracker.R
+import com.dotabuildtracker.ui.viewmodel.ItemBuildViewModelFactory
 import com.dotabuildtracker.utils.WorkManagerHelper
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var adapter: ItemBuildAdapter
     
-    private val viewModel: ItemBuildViewModel by viewModels(factoryProducer = {
+    private val viewModel: ItemBuildViewModel by lazy {
         val database = AppDatabase.getDatabase(this)
         val repository = ItemBuildRepository(
             RetrofitClient.apiService,
             database.itemBuildDao(),
             PreferencesManager(this)
         )
-        ItemBuildViewModelFactory(repository)
-    })
+        ViewModelProvider(this, ItemBuildViewModelFactory(repository))[ItemBuildViewModel::class.java]
+    }
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         
+        setupActionBar()
         setupRecyclerView()
         setupObservers()
         setupClickListeners()
@@ -47,6 +51,15 @@ class MainActivity : AppCompatActivity() {
         
         // Schedule daily updates
         WorkManagerHelper.scheduleDailyUpdate(this)
+    }
+    
+    private fun setupActionBar() {
+        supportActionBar?.apply {
+            setDisplayShowHomeEnabled(true)
+            setDisplayUseLogoEnabled(true)
+            setLogo(R.drawable.dota_icon)
+            title = "Dota Build Tracker"
+        }
     }
     
     private fun setupRecyclerView() {
